@@ -10,8 +10,8 @@
     
     
         FILE *arq;
-
-
+        FILE *p;
+        
         setlocale(LC_ALL, "Portuguese");
         printf("Quantidade de candidatos para o cargo de prefeito: ");
         scanf("%d", &qtd_prefeito);
@@ -46,12 +46,14 @@
         arq = fopen ("Relatorio.txt", "a");
 
         while(arq != NULL){
-            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demogrC!fica: %d\n Faixa             etC!ria: %d\n Renda bruta: %d\n Escolaridade: %d\n RaC'a: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, 
+            p = (FILE*) malloc(sizeof(arq));
+            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demográfica: %d\n Faixa etária: %d\n Renda bruta: %d\n Escolaridade: %d\n Raça: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, 
             DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
             RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
         }
-
         fclose(arq);
+        free(arq)
+
     
     return 0;
 }
