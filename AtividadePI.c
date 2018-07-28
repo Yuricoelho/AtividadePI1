@@ -50,6 +50,7 @@ int main(){
             RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
         }
         fclose(arq);
-        free(arq);    
+        free(arq); 
+        p = NULL;
 return 0;
 }
