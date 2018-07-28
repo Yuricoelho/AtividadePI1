@@ -51,6 +51,5 @@ int main(){
         }
         fclose(arq);
         free(arq); 
-        p = NULL;
 return 0;
 }
