@@ -26,17 +26,17 @@ int main(){
         scanf("%d", &area_local);
 
         DensidadeDemografica = qtd_habitantes / area_local;
-        printf("Densidade demogrC!fica: ");
+        printf("Densidade demográfica: ");
         scanf("%d", &DensidadeDemografica);
-        printf("\nFaixa EtC!ria: ");
+        printf("\nFaixa etária: ");
         scanf("%d", &FaixaEtaria);
         printf("\nRenda Bruta: ");
         scanf("%d", &RendaBruta);
-        printf("\nNC-vel fundamental: ");
+        printf("\nNível fundamental: ");
         scanf("%d", &NivelFundamental);
-        printf("\nNC-vel mC)dio: ");
+        printf("\nNível mC)dio: ");
         scanf("%d", &NivelMedio);
-        printf("\nNC-vel superior: ");
+        printf("\nNível superior: ");
         scanf("%d", &NivelSuperior);
         printf("\nQuantidade de candidatos para o cargo de prefeito: ");
         scanf("%d", &qtd_prefeito);
