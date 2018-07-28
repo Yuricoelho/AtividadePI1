@@ -42,7 +42,7 @@ int main(){
 			}
 		}
         
-			clrscr();   
+		clrscr();   
  		while (sair == 0){
  		if (menu == 1){
         		printf("Quantidade de candidatos para o cargo de prefeito: ");
@@ -84,6 +84,7 @@ int main(){
 		        }
 		        fclose(arq);
 		        free(arq);
+		        p = NULL;
 		        sair = 1;
 			}
 			/*Deste ponto em diante foi adicionado por Lucas Hipolito*/
@@ -97,7 +98,7 @@ int main(){
 	        	printf ("\nPrezado eleitor, favor identifique-se:\n");
 	        	
 	        	printf ("\nNome:\n");
-	        	scanf ("%s", &nome);
+	        	scanf ("%[^\n]s", &nome);
 	        	printf ("\n\nIdade:\n");
 	        	scanf ("%d", &idade);
 	        	
@@ -169,6 +170,7 @@ int main(){
 		        }
 		        fclose(arq);
 		        free(arq);
+		        p = NULL;
 		        printf ("\nDeseja sair ou votar novamente?\n");
 		        printf ("1 - Sair\n0 - Votar novamente");
 		        scanf("%d", &sair);
