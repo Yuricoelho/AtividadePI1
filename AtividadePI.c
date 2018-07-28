@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <locale.h>
 
-    int main(){
+int main(){
         int qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, 
         DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
         RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaNegra,
         RacaBranca, RacaAmarela;
-    
-    
     
         FILE *arq;
         FILE *p;
@@ -42,7 +40,6 @@
         printf("\nQuantidade de candidatos para o cargo de prefeito: ");
         scanf("%d", &qtd_prefeito);
 
-
         arq = fopen ("Relatorio.txt", "a");
 
         while(arq != NULL){
@@ -52,8 +49,6 @@
             RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
         }
         fclose(arq);
-        free(arq)
-
-    
-    return 0;
+        free(arq);    
+return 0;
 }
