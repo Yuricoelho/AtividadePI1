@@ -4,7 +4,7 @@
 #include <string.h>
 #include <conio.h>
 /*
---Altera��es Lucas Hip�lito, data: 28/07/2018
+--Alterações Lucas Hipólito, data: 28/07/2018
 Vou comentar tudo que acrescentar
 */
 
@@ -59,17 +59,15 @@ int main(){
 		        scanf("%d", &area_local);
 		
 		        DensidadeDemografica = qtd_habitantes / area_local;
-		        printf("Densidade demográfica: ");
-		        scanf("%d", &DensidadeDemografica);
-		        printf("\nFaixa etária: ");
+		        printf("\nFaixa etÃ¡ria: ");
 		        scanf("%d", &FaixaEtaria);
 		        printf("\nRenda Bruta: ");
 		        scanf("%d", &RendaBruta);
-		        printf("\nNível fundamental: ");
+		        printf("\nNÃ­vel fundamental: ");
 		        scanf("%d", &NivelFundamental);
-		        printf("\nNível mC)dio: ");
+		        printf("\nNÃ­vel mC)dio: ");
 		        scanf("%d", &NivelMedio);
-		        printf("\nNível superior: ");
+		        printf("\nNÃ­vel superior: ");
 		        scanf("%d", &NivelSuperior);
 		        printf("\nQuantidade de candidatos para o cargo de prefeito: ");
 		        scanf("%d", &qtd_prefeito);
@@ -78,7 +76,7 @@ int main(){
 		
 		        while(arq != NULL){
 		            p = (FILE*) malloc(sizeof(arq));
-		            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demográfica: %d\n Faixa etária: %d\n Renda bruta: %d\n Escolaridade: %d\n Raça: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, 
+		            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demogrÃ¡fica: %d\n Faixa etÃ¡ria: %d\n Renda bruta: %d\n Escolaridade: %d\n RaÃ§a: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, 
 		            DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
 		            RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
 		        }
@@ -160,7 +158,7 @@ int main(){
 	        	printf ("\n<(Inserir lista de candidatos governador)>");
 	        	//scanf("%d", &numeroCandidatoGovernador);
 	        	
-	        	system("pause");
+	        	//system("pause");
 	        	
 	        	arq = fopen ("Eleitores.txt", "a");
 		
@@ -173,12 +171,8 @@ int main(){
 		        p = NULL;
 		        printf ("\nDeseja sair ou votar novamente?\n");
 		        printf ("1 - Sair\n0 - Votar novamente");
-		        scanf("%d", &sair);
+		        scanf("%d", &sair);	
 		}		
 	}
-        	
-		
-        
-         
-return 0;
+return 0;      
 }
