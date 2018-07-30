@@ -3,11 +3,6 @@
 #include <locale.h>
 #include <string.h>
 #include <conio.h>
-/*
---Alterações Lucas Hipólito, data: 28/07/2018
-Vou comentar tudo que acrescentar
-*/
-
 
 void clrscr()
 {
@@ -15,18 +10,17 @@ void clrscr()
 }
 
 int main(){
-        int qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes,
-        DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
-        RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaNegra,
-        RacaBranca, RacaAmarela, /*Acrescentado*/menu, reset = 1, sair = 0;
+        int qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, FaixaEtaria, 
+	NivelFundamental, NivelMedio, NivelSuperior, RacaNegra, RacaBranca, 
+	RacaAmarela, menu, reset = 1, sair = 0;																																																																																																																																																			
+	
+	double area_local, qtd_habitantes, DensidadeDemografica, RendaBruta;
 
         FILE *arq;
         FILE *p;
 
         setlocale(LC_ALL, "Portuguese");
-
-
-        /*Menu Acrescentado*/
+	
         while (reset == 1){
         	printf("Bem vindo. Selecione a funcao: ");
         	printf("\n1 - Administrativo");
@@ -34,7 +28,7 @@ int main(){
         	printf ("\n3 - Sair\n");
         	scanf("%d", &menu);
         	if (menu != 1 && menu != 2 && menu != 3){
-        		printf ("\nOpcao invalida!\nSelecione novamente.");
+        		printf ("\nOpção inválida!\nSelecione novamente.");
 			}
 			else if (menu == 3){
 				exit(1);
@@ -53,7 +47,7 @@ int main(){
 		        scanf("%d", &qtd_deputado);
 		        printf("\nQuantidade de candidatos para o cargo de governador: ");
 		        scanf("%d", &qtd_governador);
-		        printf("\nQuantidade de candidatos para o cargo de votantes: ");
+		        printf("\nQuantidade de votantes: ");
 		        scanf("%d", &qtd_votantes);
 		        printf("\nQuantidade de habitantes: ");
 		        scanf("%d", &qtd_habitantes);
@@ -61,27 +55,27 @@ int main(){
 		        scanf("%d", &area_local);
 
 		        DensidadeDemografica = qtd_habitantes / area_local;
-		        printf("\nFaixa etÃ¡ria: ");
+		        printf("\nFaixa etária: ");
 		        scanf("%d", &FaixaEtaria);
 		        printf("\nRenda Bruta: ");
-		        scanf("%d", &RendaBruta);
-		        printf("\nNÃ­vel fundamental: ");
+		        scanf("%lf", &RendaBruta);
+		        printf("\nNível fundamental: ");
 		        scanf("%d", &NivelFundamental);
-		        printf("\nNÃ­vel mC)dio: ");
+		        printf("\nNível médio: ");
 		        scanf("%d", &NivelMedio);
-		        printf("\nNÃ­vel superior: ");
+		        printf("\nNível superior: ");
 		        scanf("%d", &NivelSuperior);
 		        printf("\nQuantidade de candidatos para o cargo de prefeito: ");
 		        scanf("%d", &qtd_prefeito);
 
 		        arq = fopen ("Relatorio.txt", "a");
 
-		        //while(arq != NULL){
+		        if(arq != NULL){
 		            p = (FILE*) malloc(sizeof(arq));
-		            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demogrÃ¡fica: %d\n Faixa etÃ¡ria: %d\n Renda bruta: %d\n Escolaridade: %d\n RaÃ§a: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes,
-		            DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
+		            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demográfica: %.3lf\n Faixa etária: %d\n Renda bruta: %.2lf\n Escolaridade: %d\n Raça: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes,
+		            DensidadeDemografica, FaixaEtaria,
 		            RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
-		        //}
+		        }
 		        fclose(arq);
 		        free(arq);
 		        p = NULL;
@@ -165,10 +159,10 @@ int main(){
 
 	        	arq = fopen ("Eleitores.txt", "a");
 
-		        //while(arq != EOF){
+		        if(arq != NULL){
 		            p = (FILE*) malloc(sizeof(arq));
 		            fprintf(arq, "Eleitor(a): %s\nIdade: %d\nEscolaridade: %s\nRenda: %.2f\nVoto prefeito: %d\nVoto Deputado: %d\nVoto Governador: %d\n_______________________________\n", nome, idade, escolaridade, renda,/*substituir voto prefeito*/ 0, /*sustituir voto deputado*/ 0, /*substituir voto governador*/0);
-		        //}
+		        }
 		        fclose(arq);
 		        free(arq);
 		        p = NULL;
