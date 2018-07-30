@@ -76,12 +76,12 @@ int main(){
 
 		        arq = fopen ("Relatorio.txt", "a");
 
-		        while(arq != NULL){
+		        //while(arq != NULL){
 		            p = (FILE*) malloc(sizeof(arq));
 		            fprintf(arq, "Prefeito: %d\n Deputado: %d\n Governador: %d\n Quantidade de votantes: %d\n Densidade demogrÃ¡fica: %d\n Faixa etÃ¡ria: %d\n Renda bruta: %d\n Escolaridade: %d\n RaÃ§a: %d", qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes,
 		            DensidadeDemografica, qtd_habitantes, area_local, FaixaEtaria,
 		            RendaBruta, NivelFundamental, NivelMedio, NivelSuperior, RacaBranca, RacaNegra, RacaAmarela);
-		        }
+		        //}
 		        fclose(arq);
 		        free(arq);
 		        p = NULL;
