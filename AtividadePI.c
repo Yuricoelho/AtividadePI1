@@ -10,17 +10,17 @@ void clrscr()
 }
 
 int main(){
-        int qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, FaixaEtaria, 
-	NivelFundamental, NivelMedio, NivelSuperior, RacaNegra, RacaBranca, 
-	RacaAmarela, menu, reset = 1, sair = 0;																																																																																																																																																			
-	
+        int qtd_prefeito, qtd_deputado, qtd_governador, qtd_votantes, FaixaEtaria,
+	NivelFundamental, NivelMedio, NivelSuperior, RacaNegra, RacaBranca,
+	RacaAmarela, menu, voto, reset = 1, sair = 0, numeroCandidato;
+
 	double area_local, qtd_habitantes, DensidadeDemografica, RendaBruta;
 
         FILE *arq;
         FILE *p;
 
         setlocale(LC_ALL, "Portuguese");
-	
+
         while (reset == 1){
         	printf("Bem vindo. Selecione a funcao: ");
         	printf("\n1 - Administrativo");
@@ -81,7 +81,6 @@ int main(){
 		        p = NULL;
 		        sair = 1;
 			}
-			/*Deste ponto em diante foi adicionado por Lucas Hipolito*/
 	        if (menu ==2){
 	        	char nome[50];
 	        	int idade;
@@ -140,22 +139,32 @@ int main(){
 					}
 				}
 
+				auxiliar = 0;
+
 	        	printf("\n\nRenda bruta mensal: (Use virgula caso necessario)\n");
 	        	scanf ("%f", &renda);
 
+
+
+
 	        	clrscr();
 	        	printf ("\nMuito obrigado por preencher suas informacoes.\n______________________________________________________\nFaca seus votos:\n");
-	        	printf ("\nPrefeito:");
-	        	printf ("\n<(Inserir lista de candidatos prefeito)>");
-	        	//scanf("%d", &numeroCandidatoPrefeito);
-	        	printf ("\n\nDeputado:");
-	        	printf ("<(Inserir lista de candidatos deputado)>");
-	        	//scanf("%d", &numeroCandidatoDeputado);
-	        	printf ("\n\nGovernador:");
-	        	printf ("\n<(Inserir lista de candidatos governador)>");
-	        	//scanf("%d", &numeroCandidatoGovernador);
+	        	printf ("\n1 - Candidato");
+	        	printf ("\n2 - Nulo");
+	        	printf ("\n3 - Branco\n");
+	        	scanf ("%d", &voto);
 
-	        	//system("pause");
+	        	while (auxiliar == 0){
+	        		clrscr();
+	        		printf ("\nDigite o numero do seu candidato:");
+	        		scanf("%d", &numeroCandidato);
+	        		printf ("Seu voto: \nCandidato: fulano.\nNumero: %d", numeroCandidato);
+	        		printf ("\nConfirma?\nS / N");
+				}
+
+
+
+	        	system("pause");
 
 	        	arq = fopen ("Eleitores.txt", "a");
 
