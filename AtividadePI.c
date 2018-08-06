@@ -144,23 +144,45 @@ int main(){
 	        	printf("\n\nRenda bruta mensal: (Use virgula caso necessario)\n");
 	        	scanf ("%f", &renda);
 
-
-
-
 	        	clrscr();
 	        	printf ("\nMuito obrigado por preencher suas informacoes.\n______________________________________________________\nFaca seus votos:\n");
 	        	printf ("\n1 - Candidato");
 	        	printf ("\n2 - Nulo");
 	        	printf ("\n3 - Branco\n");
 	        	scanf ("%d", &voto);
+	        	switch (voto){
+                    case 1:
+                        char confirma = "S";
+                        while (auxiliar == 0){
+                        clrscr();
+                        printf ("\nDigite o numero do seu candidato:");
+                        scanf("%d", &numeroCandidato);
+                        printf ("Seu voto: \nCandidato: fulano.\nNumero: %d", numeroCandidato);
+                        printf ("\nConfirma?\nS / N");
+                        scanf("%c", &confirma);
+                        switch (confirma){
+                            case "S":
+                                auxiliar = 1;
+                                break;
+                            case "N":
+                                auxiliar = 0;
+                                break;
+                            default:
+                                printf("\nOpcao invalida! Selecione novamente.");
+                                auxiliar = 0;
+                                break;
+                        }
+                    }
+                    break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        printf("\nOpcao invalida! Selecione novamente.");
+	        	}
 
-	        	while (auxiliar == 0){
-	        		clrscr();
-	        		printf ("\nDigite o numero do seu candidato:");
-	        		scanf("%d", &numeroCandidato);
-	        		printf ("Seu voto: \nCandidato: fulano.\nNumero: %d", numeroCandidato);
-	        		printf ("\nConfirma?\nS / N");
-				}
+
 
 
 

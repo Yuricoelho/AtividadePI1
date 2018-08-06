@@ -10,3 +10,8 @@ http://www.mlaureano.org/livro/livro_estrutura_conta.pdf
 
 Algoritmos Cormen:
 https://www.cin.ufpe.br/~ara/algoritmos-%20portugu%EAs-%20cormen.pdf
+
+
+
+Algoritmos Segurança:
+http://www.pgbioinfo.icb.ufmg.br/defesas/28D.PDF
