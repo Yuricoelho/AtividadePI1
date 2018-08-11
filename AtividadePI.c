@@ -150,9 +150,9 @@ int main(){
 	        	printf ("\n2 - Nulo");
 	        	printf ("\n3 - Branco\n");
 	        	scanf ("%d", &voto);
+	        	char confirma = 'S';
 	        	switch (voto){
                     case 1:
-                        char confirma = "S";
                         while (auxiliar == 0){
                         clrscr();
                         printf ("\nDigite o numero do seu candidato:");
@@ -161,10 +161,10 @@ int main(){
                         printf ("\nConfirma?\nS / N");
                         scanf("%c", &confirma);
                         switch (confirma){
-                            case "S":
+                            case 'S':
                                 auxiliar = 1;
                                 break;
-                            case "N":
+                            case 'N':
                                 auxiliar = 0;
                                 break;
                             default:
@@ -175,8 +175,38 @@ int main(){
                     }
                     break;
                     case 2:
+                    	printf ("\nVoto NULO. Confirma?  S/N\n");
+                    	scanf("%c", &confirma);
+                        switch (confirma){
+                            case 'S':
+                                auxiliar = 1;
+                                break;
+                            case 'N':
+                                auxiliar = 0;
+                                break;
+                            default:
+                                printf("\nOpcao invalida! Selecione novamente.");
+                                auxiliar = 0;
+                                break;
+                        }
+                    	numeroCandidato == -1;
                         break;
                     case 3:
+                    	printf ("\nVoto em branco. Confirma?  S/N\n");
+                    	scanf("%c", &confirma);
+                        switch (confirma){
+                            case 'S':
+                                auxiliar = 1;
+                                break;
+                            case 'N':
+                                auxiliar = 0;
+                                break;
+                            default:
+                                printf("\nOpcao invalida! Selecione novamente.");
+                                auxiliar = 0;
+                                break;
+                        }
+                    	numeroCandidato == 0;
                         break;
                     default:
                         printf("\nOpcao invalida! Selecione novamente.");
