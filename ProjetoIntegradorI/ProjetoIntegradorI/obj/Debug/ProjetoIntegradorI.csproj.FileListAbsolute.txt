@@ -1,0 +1,7 @@
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe.config
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.pdb
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csprojAssemblyReference.cache
