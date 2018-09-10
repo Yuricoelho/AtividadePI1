@@ -28,7 +28,6 @@ namespace ProjetoIntegradorI
         static private bool MenuUrna()
         {
             int menu;
-            bool success = false;
             Console.Clear();
             Console.WriteLine("Bem vindo. Selecione a funcao: ");
             Console.WriteLine("1 - Administrativo");
@@ -59,7 +58,7 @@ namespace ProjetoIntegradorI
             //MENU ELEITOR.
             if (menu == 2)
             {
-                
+                menuEleitores();
                 return true;
             }
             return true;
