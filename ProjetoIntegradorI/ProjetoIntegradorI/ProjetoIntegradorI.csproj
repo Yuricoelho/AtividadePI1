@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auxiliar\Arquivo.cs" />
+    <Compile Include="Auxiliar\Criptografia.cs" />
     <Compile Include="ProjetoIntegradorI\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

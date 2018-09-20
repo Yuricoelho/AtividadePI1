@@ -12,7 +12,6 @@ namespace ProjetoIntegradorI
     {
         static void Main(string[] args)
         {
-
             bool reset = true;
 
             while (reset)
