@@ -57,8 +57,8 @@ namespace Auxiliar
                 //Na tabela ASCII os únicos caracteres válidos estão entre as posições 33 e 126 e acima de 161. Valor máximo 255
                 while ((int.Parse(cdu) > 126 && int.Parse(cdu) < 161) || int.Parse(cdu) < 33 || int.Parse(cdu) > 255)
                 {
-                    //1 Byte vai de 0 à 256. Porém na tabela ASCII após 127 repete então o máximo para a centena é 1
-                    c = Random(0, 1);
+                    //1 Byte vai de 0 à 256.
+                    c = Random(0, 2);
                     d = Random(0, 9);
                     u = Random(0, 9);
                     cdu = c.ToString() + d.ToString() + u.ToString();
