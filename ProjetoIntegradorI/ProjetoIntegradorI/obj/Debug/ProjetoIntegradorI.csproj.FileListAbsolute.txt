@@ -12,3 +12,10 @@ C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe.config
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.pdb
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csprojAssemblyReference.cache
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
+C:\Luk\Projects\IESB\AtividadePI1\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb

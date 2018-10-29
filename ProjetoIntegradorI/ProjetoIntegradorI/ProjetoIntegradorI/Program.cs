@@ -13,7 +13,7 @@ namespace ProjetoIntegradorI
         static void Main(string[] args)
         {
             bool reset = true;
-
+            Criptografia cp = new Criptografia();
             while (reset)
             {
                 reset = MenuUrna();
