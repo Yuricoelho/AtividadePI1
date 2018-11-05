@@ -1,3 +1,4 @@
-1;10;zézinho;17
-2;22;zé;4
-3;18;jão;48
+﻿1;codigo_do_canditado;nome_canditado;codigo_do_partido
+15;zé;17
+17;Bolso;17
+2;vitinho;2

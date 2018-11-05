@@ -84,12 +84,14 @@ namespace Auxiliar
             string text1 = regiao + ";" + cpf;
             string text2 = codMunicipio.ToString() + ";" + codCandidatoFederal.ToString() + ";" + codPartidoFederal.ToString() + ";" + codCandidatoFederal.ToString() + ";" + codPartidoregional.ToString();
             string fullPath = path + nomeArq;
+            Criptografia crypt = new Criptografia();
             if (!File.Exists(fullPath))
             {
                 string text = "2;" + text1 + ";1;" + text2;
+                text = crypt.Encrypt(text);
                 using (StreamWriter file = new StreamWriter(fullPath))
                 {
-                    file.WriteLine("1;regiao;cpf;codigo_municipio;codigo_candidato_federal;codigo_partido_federal;codigo_candidato_regional;codigo_partido_regional");
+                    file.WriteLine(crypt.Encrypt("1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional"));
                     file.WriteLine(text);
                 }
             }
@@ -99,6 +101,7 @@ namespace Auxiliar
                 //n é o número sequencial que será inserido como identificador para o voto
                 int n = lines.Length;
                 string text = "2;" + text1 + ";" + n.ToString() + ";" + text2;
+                text = crypt.Encrypt(text);
                 using (StreamWriter file = new StreamWriter(fullPath, true))
                 {
                     file.WriteLine(text);
@@ -106,6 +109,33 @@ namespace Auxiliar
             }
         }
 
+        public void exportaVotos()
+        {
+            Criptografia crypt = new Criptografia();
+            string nomeArq = "Votos.txt";
+            string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            string fullPath = path + nomeArq;
+            if (!File.Exists(fullPath))
+            {
+                Console.WriteLine("Não há votos cadastrados!");
+            }
+            else
+            {
+                string[] lines = File.ReadAllLines(fullPath);
+                for (int i = 0; i < lines.Length - 1; i++)
+                {
+                    lines[i] = crypt.Decrypt(lines[i]);
+                }
+                string fullpathExporta = path + "VotosExporta.txt";
+                using (StreamWriter file = new StreamWriter(fullpathExporta))
+                {
+                    foreach (string line in lines)
+                    {
+                        file.WriteLine(line);
+                    }
+                }
+            }
+        }
     }
 
 }

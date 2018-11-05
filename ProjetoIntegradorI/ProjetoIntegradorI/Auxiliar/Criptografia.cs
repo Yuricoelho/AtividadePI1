@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
+using System.Security.Cryptography;
 
 namespace Auxiliar
 {
@@ -25,6 +26,7 @@ namespace Auxiliar
         private static Random rnd;
         private string publicKey;
         private string privateKey;
+        private string modulus;
 
         #endregion
 
@@ -49,86 +51,141 @@ namespace Auxiliar
             bool success = false;
             bool publicPass = false;
             bool privatePass = false;
-            string[] key = { "","" };
+            string[] key = { "", "", ""};
             StringBuilder _key = new StringBuilder();
-            while (!success)
-            {
-                //C = Centena, Dz = Dezena, U = Unidade
-                int c, dz, u;
-                string cdu;
-                char car;
-                for (var i = 0; i < 256; i++)
-                {
-                    cdu = "256";
-                    //Na tabela ASCII os únicos caracteres válidos estão entre as posições 33 e 126 e acima de 161. Valor máximo 255
-                    while ((int.Parse(cdu) > 126 && int.Parse(cdu) < 161) || int.Parse(cdu) < 33 || int.Parse(cdu) > 255)
-                    {
-                        //1 Byte vai de 0 à 256.
-                        c = Random(0, 2);
-                        dz = Random(0, 9);
-                        u = Random(0, 9);
-                        cdu = c.ToString() + dz.ToString() + u.ToString();
-                    }
-                    //Conversão de decimal para dítio válido conforme tabela ASCII
-                    //car = (char)int.Parse(cdu);
-                    //cdu = (string)car.ToString();
-                    _key.Append(cdu);
-                }
-                if (!publicPass)
-                {
-                    key[0] = _key.ToString();
-                }
-                if (!success)
-                {
-                    if (!privatePass)
-                    {
-                        key[1] = _key.ToString();
-                    }
-                    BigInteger p1 = BigInteger.Parse(key[0]);
-                    if (!VerificaPrimos(p1))
-                    {
-                        success = false;
-                    }
-                    else
-                    {
-                        key[0] = p1.ToString();
-                        publicPass = true;
-                        BigInteger q1 = BigInteger.Parse(key[1]);
-                        if (!VerificaPrimos(q1))
-                        {
-                            privatePass = false;
-                            success = false;
-                        }
-                        else
-                        {
-                            key[1] = q1.ToString();
-                            success = true;
-                            privatePass = true;
-                        }
-                    }
-                }
-            }
-            BigInteger p = BigInteger.Parse(key[0]);
-            BigInteger q = BigInteger.Parse(key[1]);
+            //while (!success)
+            //{
+            //    //C = Centena, Dz = Dezena, U = Unidade
+            //    int c, dz, u;
+            //    string cdu;
+            //    char car;
+            //    for (var i = 0; i < 256; i++)
+            //    {
+            //        cdu = "256";
+            //        //Na tabela ASCII os únicos caracteres válidos estão entre as posições 33 e 126 e acima de 161. Valor máximo 255
+            //        while ((int.Parse(cdu) > 126 && int.Parse(cdu) < 161) || int.Parse(cdu) < 33 || int.Parse(cdu) > 255)
+            //        {
+            //            //1 Byte vai de 0 à 256.
+            //            c = Random(0, 2);
+            //            dz = Random(0, 9);
+            //            u = Random(0, 9);
+            //            cdu = c.ToString() + dz.ToString() + u.ToString();
+            //        }
+            //        //Conversão de decimal para dítio válido conforme tabela ASCII
+            //        //car = (char)int.Parse(cdu);
+            //        //cdu = (string)car.ToString();
+            //        _key.Append(cdu);
+            //    }
+            //    if (!publicPass)
+            //    {
+            //        key[0] = _key.ToString();
+            //    }
+            //    if (!success)
+            //    {
+            //        if (!privatePass)
+            //        {
+            //            key[1] = _key.ToString();
+            //        }
+            //        BigInteger p1 = BigInteger.Parse(key[0]);
+            //        if (!VerificaPrimos(p1))
+            //        {
+            //            success = false;
+            //        }
+            //        else
+            //        {
+            //            key[0] = p1.ToString();
+            //            publicPass = true;
+            //            BigInteger q1 = BigInteger.Parse(key[1]);
+            //            if (!VerificaPrimos(q1))
+            //            {
+            //                privatePass = false;
+            //                success = false;
+            //            }
+            //            else
+            //            {
+            //                key[1] = q1.ToString();
+            //                success = true;
+            //                privatePass = true;
+            //            }
+            //        }
+            //    }
+            //}
+            //BigInteger p = BigInteger.Parse(key[0]);
+            //BigInteger q = BigInteger.Parse(key[1]);
+            BigInteger p = BigInteger.Parse("115792089237316195423570985008687907853269984665640564039457584007913129639747");
+            BigInteger q = BigInteger.Parse("2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397223");
             BigInteger n = p * q;
-            BigInteger phiN = ((p - 1) * (q - 1));
-            int e = Random(1, (int)phiN);
-            BigInteger d = 0;
-            while (d * e % phiN != 1)
+
+            BigInteger pM = p - 1;
+            BigInteger qM = q - 1;
+            BigInteger phiN = (pM * qM);
+
+            BigInteger e;
+            do
             {
-                d++;
-            }
+                var rngBig = new RNGCryptoServiceProvider();
+                byte[] bytes = new byte[phiN.ToByteArray().Length - 1];
+                rngBig.GetBytes(bytes);
+                e = new BigInteger(bytes);
+                e = BigInteger.Abs(e);
+            } while (e > phiN || phiN % e == 0 || e <= 1);
+
+            bool maior = e > phiN;
+            //BigInteger d = 666245125351 - 1;
+            //BigInteger aux;
+            //do
+            //{
+            //    d++;
+            //    aux = d * e;
+            //} while ((aux) % phiN != 1);
+            phiN = phiN - 1;
+            BigInteger d = BigInteger.ModPow(e, phiN, n);
             key[0] = e.ToString();
             key[1] = d.ToString();
+            key[2] = n.ToString();
             return key;
         }
 
-        public void Encrypt()
+        //Método encapsulado de encriptação
+        public string Encrypt(string text)
         {
-            
-
+            return this.encryptizer(text);
         }
 
+        //Método encapsulado de desencriptação
+        public string Decrypt (string text)
+        {
+            return this.decryptizer(text);
+        }
+
+        //Método interno de encriptação
+        private string encryptizer (string text)
+        {
+            byte[] auxByte = Encoding.UTF8.GetBytes(text);
+            BigInteger m = new BigInteger(auxByte);
+            BigInteger e = BigInteger.Parse(publicKey);
+            BigInteger N = BigInteger.Parse(modulus);
+            BigInteger C = BigInteger.ModPow(m, e, N);
+            auxByte = C.ToByteArray();
+            text = Convert.ToBase64String(auxByte);
+        
+            return text;
+        }
+
+        //Método interno de desencriptação
+        private string decryptizer (string text)
+        {
+            byte[] auxByte = Encoding.UTF8.GetBytes(text);
+            BigInteger C = new BigInteger(auxByte);
+            BigInteger d = BigInteger.Parse(privateKey);
+            BigInteger N = BigInteger.Parse(modulus);
+            BigInteger m = BigInteger.ModPow(C, d, N);
+            auxByte = m.ToByteArray();
+            text = Convert.ToBase64String(auxByte);
+            return text;
+        }
+
+        //Verifica as chaves no arquivo
         private void VerificaChaves()
         {
             string nomeArq = "Keys.txt";
@@ -139,10 +196,12 @@ namespace Auxiliar
                 string[] keys = GenerateKey();
                 publicKey = keys[0];
                 privateKey = keys[1];
+                modulus = keys[2];
                 using (StreamWriter file = new StreamWriter(fullPath))
                 {
                     file.WriteLine(publicKey);
                     file.WriteLine(privateKey);
+                    file.WriteLine(modulus);
                 }
             }
             else
@@ -150,6 +209,7 @@ namespace Auxiliar
                 string[] keys = File.ReadAllLines(fullPath);
                 publicKey = keys[0];
                 privateKey = keys[1];
+                modulus = keys[2];
             }
         }
 
@@ -164,7 +224,15 @@ namespace Auxiliar
             }
 
             return true;
-        } 
+        }
+
+        private BigInteger Pow(BigInteger value, BigInteger exponent)
+        {
+            BigInteger originalValue = value;
+            while (exponent-- > 1)
+                value = BigInteger.Multiply(value, originalValue);
+            return value;
+        }
 
         #endregion
     }

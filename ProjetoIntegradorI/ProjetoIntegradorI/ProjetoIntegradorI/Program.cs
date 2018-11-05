@@ -13,7 +13,7 @@ namespace ProjetoIntegradorI
         static void Main(string[] args)
         {
             bool reset = true;
-            Criptografia cp = new Criptografia();
+            Criptografia criptography = new Criptografia();
             while (reset)
             {
                 reset = MenuUrna();
@@ -74,6 +74,7 @@ namespace ProjetoIntegradorI
                 Console.Clear();
                 Console.WriteLine("Selecione a opção abaixo: ");
                 Console.WriteLine("1 - Cadastrar candidato");
+                Console.WriteLine("2 - Exportar votos");
                 Console.WriteLine("0 - Sair");
 
                 //Lê valores para o menu adm
@@ -98,7 +99,11 @@ namespace ProjetoIntegradorI
                     case 1:
                         cadastrarCandidato();
                         break;
-
+                    case 2:
+                        Arquivo arq = new Arquivo();
+                        arq.exportaVotos();
+                        Console.WriteLine("Votos exportados com sucesso!");
+                        break;
                     //Sair do Administrativo
                     case 0:
                         Console.WriteLine("Saindo...");
@@ -118,7 +123,7 @@ namespace ProjetoIntegradorI
 
             string regiao = string.Empty;
 
-            int cpf = 00000000000;
+            long cpf = 00000000000;
             string CPF = "00000000000";
 
             int codCandidato = 0;
@@ -196,13 +201,13 @@ namespace ProjetoIntegradorI
                     //Tamanho obrigatório 11
                     if (scanf.Trim().Length != 11)
                     {
-                        Console.WriteLine("CPF INVÁLIDO!");
+                        Console.WriteLine("CPF INVÁLIDO! Digite 11 díditos");
                         success = false;
                     }
                     else
                     {
                         //Verifica se é compatível com inteiro
-                        if (!int.TryParse(scanf.Trim(), out cpf))
+                        if (!long.TryParse(scanf.Trim(), out cpf))
                         {
                             success = false;
                             Console.WriteLine("Inválido, entre apenas números");
@@ -210,7 +215,7 @@ namespace ProjetoIntegradorI
                         else
                         {
                             //Confirmação do CPF digitado
-                            Console.WriteLine("CPF digitado: " + cpf.ToString().Trim());
+                            Console.WriteLine("CPF digitado: " + scanf.ToString().Trim());
                             Console.WriteLine("Confirma?");
                             Console.WriteLine("S / N");
                             string confirma = Console.ReadLine().Trim().Substring(0,1);
@@ -225,9 +230,8 @@ namespace ProjetoIntegradorI
                             switch (confirma)
                             {
                                 case "S":
-
                                     //Trata pontuação do CPF   
-                                    CPF = trataCPF(cpf.ToString().Trim());
+                                    CPF = trataCPF(scanf.ToString().Trim());
                                     success = true;
                                     break;
                                 case "N":
@@ -362,7 +366,7 @@ namespace ProjetoIntegradorI
                 success = false;
                 while (!success)
                 {
-                    Console.WriteLine("Digite o Número do seu candidato federal (Digite 'B' para votar em branco)");
+                    Console.WriteLine("Digite o Número do seu candidato regional (Digite 'B' para votar em branco)");
                     string scanf = Console.ReadLine();
 
                     //verifica se é compatível com inteiros
@@ -592,10 +596,10 @@ namespace ProjetoIntegradorI
         //Faz tratamento de pontuação do CPF
         static private string trataCPF(string CPF)
         {
-            string cpfsub1 = CPF.Substring(0, 2);
-            string cpfsub2 = CPF.Substring(3, 5);
-            string cpfsub3 = CPF.Substring(6, 8);
-            string digito = CPF.Substring(9, 10);
+            string cpfsub1 = CPF.Substring(0, 3);
+            string cpfsub2 = CPF.Substring(3, 3);
+            string cpfsub3 = CPF.Substring(6, 3);
+            string digito = CPF.Substring(9, 2);
             CPF = cpfsub1 + "." + cpfsub2 + "." + cpfsub3 + "-" + digito;
             return CPF;
         }
