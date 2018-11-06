@@ -110,15 +110,13 @@ namespace Auxiliar
             //        }
             //    }
             //}
-            //BigInteger p = BigInteger.Parse(key[0]);
-            //BigInteger q = BigInteger.Parse(key[1]);
             BigInteger p = BigInteger.Parse("115792089237316195423570985008687907853269984665640564039457584007913129639747");
             BigInteger q = BigInteger.Parse("2037035976334486086268445688409378161051468393665936250636140449354381299763336706183397223");
-            BigInteger n = p * q;
+            BigInteger n = BigInteger.Multiply(p,q);
 
-            BigInteger pM = p - 1;
-            BigInteger qM = q - 1;
-            BigInteger phiN = (pM * qM);
+            BigInteger pM = BigInteger.Subtract(p, BigInteger.One);
+            BigInteger qM = BigInteger.Subtract(q, BigInteger.One);
+            BigInteger phiN = BigInteger.Multiply(pM, qM);
 
             BigInteger e;
             do
@@ -128,18 +126,11 @@ namespace Auxiliar
                 rngBig.GetBytes(bytes);
                 e = new BigInteger(bytes);
                 e = BigInteger.Abs(e);
-            } while (e > phiN || phiN % e == 0 || e <= 1);
+            } while (phiN % e == 0 || e <= 1 || BigInteger.GreatestCommonDivisor(e, phiN) != 1 || e >= (phiN - 1));
 
-            bool maior = e > phiN;
-            //BigInteger d = 666245125351 - 1;
-            //BigInteger aux;
-            //do
-            //{
-            //    d++;
-            //    aux = d * e;
-            //} while ((aux) % phiN != 1);
-            phiN = phiN - 1;
-            BigInteger d = BigInteger.ModPow(e, phiN, n);
+            bool é = BigInteger.GreatestCommonDivisor(e, phiN) == 1;
+            BigInteger phiNminus1 = BigInteger.Subtract(phiN, BigInteger.One);
+            BigInteger d = ModInverse(e, phiN);
             key[0] = e.ToString();
             key[1] = d.ToString();
             key[2] = n.ToString();
@@ -165,23 +156,23 @@ namespace Auxiliar
             BigInteger m = new BigInteger(auxByte);
             BigInteger e = BigInteger.Parse(publicKey);
             BigInteger N = BigInteger.Parse(modulus);
+            BigInteger d = BigInteger.Parse(privateKey);
             BigInteger C = BigInteger.ModPow(m, e, N);
             auxByte = C.ToByteArray();
             text = Convert.ToBase64String(auxByte);
-        
             return text;
         }
 
         //Método interno de desencriptação
         private string decryptizer (string text)
         {
-            byte[] auxByte = Encoding.UTF8.GetBytes(text);
+            byte[] auxByte = Convert.FromBase64String(text);
             BigInteger C = new BigInteger(auxByte);
             BigInteger d = BigInteger.Parse(privateKey);
             BigInteger N = BigInteger.Parse(modulus);
             BigInteger m = BigInteger.ModPow(C, d, N);
             auxByte = m.ToByteArray();
-            text = Convert.ToBase64String(auxByte);
+            text = Encoding.UTF8.GetString(auxByte);
             return text;
         }
 
@@ -234,6 +225,31 @@ namespace Auxiliar
             return value;
         }
 
+        private BigInteger ModInverse(BigInteger a, BigInteger n)
+        {
+            BigInteger t = 0;
+            BigInteger newt = 1;
+            BigInteger r = n;
+            BigInteger newr = a;
+            BigInteger quotient;
+            BigInteger aux;
+            while (newr != 0)
+            {
+               quotient = BigInteger.Divide(r, newr);
+                aux = newt;
+                newt = BigInteger.Subtract(t, BigInteger.Multiply(quotient, newt));
+                t = aux;
+                aux = newr;
+                newr = BigInteger.Subtract(r, BigInteger.Multiply(quotient, newr));
+                r = aux;
+            }   
+            if (r > 1)
+                return BigInteger.Zero;
+            if (t < 0)
+                t = t + n;
+            return t;
+        }
+    
         #endregion
     }
 }

@@ -13,6 +13,7 @@ namespace Auxiliar
         {
 
         }
+        private string headerVotos = "1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional";
 
         //Métodos
 
@@ -88,10 +89,11 @@ namespace Auxiliar
             if (!File.Exists(fullPath))
             {
                 string text = "2;" + text1 + ";1;" + text2;
+                
                 text = crypt.Encrypt(text);
+                //header = crypt.Encrypt(header);
                 using (StreamWriter file = new StreamWriter(fullPath))
                 {
-                    file.WriteLine(crypt.Encrypt("1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional"));
                     file.WriteLine(text);
                 }
             }
@@ -122,16 +124,17 @@ namespace Auxiliar
             else
             {
                 string[] lines = File.ReadAllLines(fullPath);
-                for (int i = 0; i < lines.Length - 1; i++)
+                for (int i = 0; i < lines.Length; i++)
                 {
                     lines[i] = crypt.Decrypt(lines[i]);
                 }
                 string fullpathExporta = path + "VotosExporta.txt";
                 using (StreamWriter file = new StreamWriter(fullpathExporta))
                 {
-                    foreach (string line in lines)
+                    file.WriteLine(headerVotos);
+                    for (int i = 0; i < lines.Length; i++)
                     {
-                        file.WriteLine(line);
+                        file.WriteLine(lines[i]);
                     }
                 }
             }
