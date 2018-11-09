@@ -1,0 +1,19 @@
+﻿<Window x:Class="ProjetoIntegradorI.Eleitor.Regiao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoIntegradorI.Eleitor"
+        mc:Ignorable="d"
+        Title="Regiao" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="voltar" Content="Voltar" HorizontalAlignment="Left" Margin="182,362,0,0" VerticalAlignment="Top" Width="75" Click="voltar_Click"/>
+        <Label x:Name="lblRegiao" Content="Escolha a região:" HorizontalAlignment="Left" Margin="312,49,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <RadioButton x:Name="rdSC" Content="Santa Catarina" HorizontalAlignment="Left" Margin="340,174,0,0" VerticalAlignment="Top" Height="21" Width="110"/>
+        <RadioButton x:Name="rdPR" Content="Paraná" HorizontalAlignment="Left" Margin="147,174,0,0" VerticalAlignment="Top" Height="21" Width="110"/>
+        <RadioButton x:Name="rdRS" Content="Rio Grande do Sul" HorizontalAlignment="Left" Margin="544,174,0,0" VerticalAlignment="Top" Height="21" Width="146"/>
+        <Button x:Name="confirmar" Content="Confirmar" HorizontalAlignment="Left" Margin="562,362,0,0" VerticalAlignment="Top" Width="75" Click="confirmar_Click_1"/>
+        <Label x:Name="lblerro" Content="Favor Selecionar um estado!" HorizontalAlignment="Left" Margin="79,200,0,0" VerticalAlignment="Top" Width="633" Background="#00000000" Foreground="#FFF50D0D" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>
