@@ -21,3 +21,28 @@ C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegrad
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.g.cs
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\CadastrarCandidato.baml
 C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe.config
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.pdb
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csprojAssemblyReference.cache
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Admin.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\CadastrarCandidato.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Eleitor.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Regiao.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\MainWindow.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\App.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI_MarkupCompile.cache
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI_MarkupCompile.lref
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Admin.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\CadastrarCandidato.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Eleitor.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Regiao.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\MainWindow.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.g.resources
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.Properties.Resources.resources
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.GenerateResource.cache
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb

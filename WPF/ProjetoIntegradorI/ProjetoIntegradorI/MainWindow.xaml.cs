@@ -40,9 +40,9 @@ namespace ProjetoIntegradorI
 
         private void eleitor_Click(object sender, RoutedEventArgs e)
         {
-            Eleitor.Eleitor el = new Eleitor.Eleitor();
-            el.Show();
-            this.Hide();
+           Eleitor.Regiao  reg = new Eleitor.Regiao();
+           reg.Show();
+           this.Hide();
         }
     }
 }

@@ -6,5 +6,24 @@
         xmlns:local="clr-namespace:ProjetoIntegradorI.Eleitor"
         mc:Ignorable="d"
         Title="Eleitor" Height="450" Width="800">
-    <Grid/>
+    <Grid Background="#FFABABAB">
+        <Label x:Name="lblEstado" Content="Votação do Estado - " HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="62" Width="774" HorizontalContentAlignment="Center" FontSize="36"/>
+        <Button x:Name="voltar" Content="Voltar" HorizontalAlignment="Left" Margin="62,377,0,0" VerticalAlignment="Top" Width="75" Click="voltar_Click_1"/>
+        <Label x:Name="lblVotacao" Content="Digite seu voto abaixo:" HorizontalAlignment="Left" Margin="323,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtVotacao" HorizontalAlignment="Left" Height="100" Margin="294,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" FontSize="72" HorizontalContentAlignment="Center" Cursor="None"/>
+        <Label x:Name="lblCPF" Content="Seu CPF: (Digite apenas os números)" HorizontalAlignment="Left" Margin="35,110,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtCPF" HorizontalAlignment="Left" Height="33" Margin="35,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="203" HorizontalContentAlignment="Center" Foreground="#FF564F4F" SpellCheck.IsEnabled="True" FontSize="20"/>
+        <Button x:Name="confirma" Content="CONFIRMA" HorizontalAlignment="Left" Margin="680,344,0,0" VerticalAlignment="Top" Width="75" BorderBrush="Black" Background="#FF277F10" Foreground="White" Height="52" Click="confirma_Click"/>
+        <Label x:Name="lblNacional" Content="Candidato Nacional" HorizontalAlignment="Left" Margin="323,246,0,0" VerticalAlignment="Top" Width="131" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="txtVotacaoRegional" HorizontalAlignment="Left" Height="100" Margin="524,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" FontSize="72" HorizontalContentAlignment="Center" Cursor="None"/>
+        <Label x:Name="lblRegional" Content="Candidato Regional" HorizontalAlignment="Left" Margin="552,246,0,0" VerticalAlignment="Top" Width="131" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblCPFobrigatorio" Content="CPF obrigatório!" HorizontalAlignment="Left" Margin="82,179,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblVotoObrigatorio" Content="Voto Nacional obrigatório!" HorizontalAlignment="Left" Margin="313,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblVotoRegObrigatorio" Content="Voto Regional obrigatório!" HorizontalAlignment="Left" Margin="552,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <CheckBox x:Name="chkBrancoN" Content="Branco" HorizontalAlignment="Left" Margin="357,272,0,0" VerticalAlignment="Top" Checked="chkBrancoN_Checked" Unchecked="chkBrancoN_Checked" />
+        <CheckBox x:Name="chkBrancoR" Content="Branco" HorizontalAlignment="Left" Margin="585,272,0,0" VerticalAlignment="Top" Checked="chkBrancoR_Checked" Unchecked="chkBrancoR_Checked"/>
+        <Label x:Name="lblCPFvalidacao" Content="Digite apenas números!" HorizontalAlignment="Left" Margin="82,180,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblVotoValidacao" Content="Apenas números ou voto em branco!" HorizontalAlignment="Left" Margin="313,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblVotoRegValidacao" Content="Apenas números ou vot em branco!" HorizontalAlignment="Left" Margin="552,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+    </Grid>
 </Window>

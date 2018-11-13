@@ -1,0 +1,3 @@
+1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional
+2;PR;064.728.689-05;1;0;17;17;17;2
+2;RS;777.777.777-77;1;0;2;2;2;0
