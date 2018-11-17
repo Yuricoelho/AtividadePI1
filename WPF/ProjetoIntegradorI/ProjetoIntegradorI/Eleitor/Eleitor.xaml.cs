@@ -32,10 +32,14 @@ namespace ProjetoIntegradorI.Eleitor
         }
 
         private string Estado;
+        private string UF;
         private long cpf;
         private string CPF;
         private int codCandidato;
         private int codCandidatoReg;
+        private int codPartidoFederal;
+        private int codPartidoregional;
+        private int codMunicipio = 0;
 
         private void PreparaTela()
         {
@@ -68,8 +72,11 @@ namespace ProjetoIntegradorI.Eleitor
         {
             if (VerificaPreenchido())
             {
-                
-
+                Arquivo arq = new Arquivo();
+                arq.escreveVoto(retornaUF(), CPF, 0, codCandidato, 0, codCandidatoReg, 0);
+                Sucesso s = new Sucesso(Estado);
+                s.Show();
+                this.Close();
             }
         }
 
@@ -118,6 +125,14 @@ namespace ProjetoIntegradorI.Eleitor
         }
         static private string trataCPF(string CPF)
         {
+            if (CPF.Length < 11)
+            {
+                int n = Math.Abs(11 - CPF.Length);
+                for (int i = 0; i < n; i++)
+                {
+                    CPF = "0" + CPF;
+                }
+            }
             string cpfsub1 = CPF.Substring(0, 3);
             string cpfsub2 = CPF.Substring(3, 3);
             string cpfsub3 = CPF.Substring(6, 3);
@@ -125,5 +140,18 @@ namespace ProjetoIntegradorI.Eleitor
             CPF = cpfsub1 + "." + cpfsub2 + "." + cpfsub3 + "-" + digito;
             return CPF;
         }
+
+        private string retornaUF()
+        {
+            if (Estado.Contains("Paraná"))
+                return "PR";
+            if (Estado.Contains("Santa Catarina"))
+                return "SC";
+            if (Estado.Contains("Rio Grande do Sul"))
+                return "RS";
+
+            return string.Empty;
+        }
+
     }
 }

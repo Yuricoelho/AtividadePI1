@@ -7,7 +7,20 @@
         mc:Ignorable="d"
         Title="CadastrarCandidato" Height="450" Width="800">
     <Grid>
-        <Button x:Name="Voltar" Content="Voltar" HorizontalAlignment="Left" Margin="355.534,352,0,0" VerticalAlignment="Top" Width="75" Click="Voltar_Click"/>
+        <Button x:Name="Voltar" Content="Voltar" HorizontalAlignment="Left" Margin="47,376,0,0" VerticalAlignment="Top" Width="75" Click="Voltar_Click"/>
+        <Label x:Name="lblNome" Content="Nome" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="136,34,0,0" Height="45" Width="83" FontSize="24"/>
+        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="36" Margin="116,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="516" FontSize="24"/>
+        <Label x:Name="lblCodigo" Content="Código do candidato" HorizontalAlignment="Left" Margin="116,172,0,0" VerticalAlignment="Top" FontSize="22" Width="234"/>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Height="43" Margin="350,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="22"/>
+        <Label x:Name="lblCodigoPartido" Content="Código do partido" HorizontalAlignment="Left" Margin="116,260,0,0" VerticalAlignment="Top" Width="202" FontSize="22"/>
+        <TextBox x:Name="txtCodigoPartido" HorizontalAlignment="Left" Height="43" Margin="350,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" FontSize="22"/>
+        <Label x:Name="lblNomeErro" Content="Nome obrigatório!" HorizontalAlignment="Left" Margin="136,120,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblCodigoErro" Content="Código do candidato obrigatório!" HorizontalAlignment="Left" Margin="350,212,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblCodigoPartidoErro" Content="Código do partido obrigatório!" HorizontalAlignment="Left" Margin="350,305,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblCodigoInvalido" Content="Inválido! Digite apenas números" HorizontalAlignment="Left" Margin="350,212,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblCodigoPartidoInvalido" Content="Inválido! Digite apenas números" HorizontalAlignment="Left" Margin="350,305,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" Margin="664,376,0,0" VerticalAlignment="Top" Width="75" Click="btnCadastrar_Click"/>
+        <Label x:Name="lblCandidatoCadastrado" Content="Candidato já cadastrado!" HorizontalAlignment="Left" Margin="300,363,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="16"/>
 
     </Grid>
 </Window>

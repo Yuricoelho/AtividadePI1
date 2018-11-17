@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Auxiliar;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace ProjetoIntegradorI.Admin
         public Admin()
         {
             InitializeComponent();
+            preparaTela();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -45,8 +47,30 @@ namespace ProjetoIntegradorI.Admin
 
         private void exportar_Click(object sender, RoutedEventArgs e)
         {
+            preparaTela();
+            try
+            {
+                Arquivo arq = new Arquivo();
+                arq.exportaVotos();
+            }
+            catch
+            {
+                lblErroExportacao.Visibility = Visibility.Visible;
+            }
             Sucesso s = new Sucesso();
             s.Show();
+            this.Hide();
+        }
+
+        private void preparaTela()
+        {
+            lblErroExportacao.Visibility = Visibility.Hidden;
+        }
+
+        private void multiplicar_Click(object sender, RoutedEventArgs e)
+        {
+            Multiplicador mul = new Multiplicador();
+            mul.Show();
             this.Hide();
         }
     }

@@ -69,6 +69,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Admin\Multiplicador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\Sucesso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -78,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Eleitor\Regiao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Eleitor\Sucesso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,6 +102,9 @@
     <Compile Include="Admin\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Multiplicador.xaml.cs">
+      <DependentUpon>Multiplicador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Sucesso.xaml.cs">
       <DependentUpon>Sucesso.xaml</DependentUpon>
     </Compile>
@@ -108,6 +119,9 @@
     </Compile>
     <Compile Include="Eleitor\Regiao.xaml.cs">
       <DependentUpon>Regiao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Eleitor\Sucesso.xaml.cs">
+      <DependentUpon>Sucesso.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -48,3 +48,7 @@ C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.g.cs
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Multiplicador.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Multiplicador.baml
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.baml

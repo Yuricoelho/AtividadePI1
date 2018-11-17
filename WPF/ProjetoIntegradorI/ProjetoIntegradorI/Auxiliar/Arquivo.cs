@@ -13,7 +13,7 @@ namespace Auxiliar
         {
 
         }
-        private string headerVotos = "1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional";
+        private string headerVotos = "1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional;data";
 
         //Métodos
 
@@ -83,12 +83,12 @@ namespace Auxiliar
             string nomeArq = "Votos.txt";
             string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
             string text1 = regiao + ";" + cpf;
-            string text2 = codMunicipio.ToString() + ";" + codCandidatoFederal.ToString() + ";" + codPartidoFederal.ToString() + ";" + codCandidatoFederal.ToString() + ";" + codPartidoregional.ToString();
+            string text2 = codMunicipio.ToString() + ";" + codCandidatoFederal.ToString() + ";" + codPartidoFederal.ToString() + ";" + codCandidatoRegional.ToString() + ";" + codPartidoregional.ToString() + ";" + DateTime.Now.ToString();
             string fullPath = path + nomeArq;
             Criptografia crypt = new Criptografia();
             if (!File.Exists(fullPath))
             {
-                string text = "2;" + text1 + ";1;" + text2;
+                string text = "1;" + text1 + ";1;" + text2;
 
                 text = crypt.Encrypt(text);
                 //header = crypt.Encrypt(header);
@@ -101,7 +101,7 @@ namespace Auxiliar
             {
                 string[] lines = File.ReadAllLines(fullPath);
                 //n é o número sequencial que será inserido como identificador para o voto
-                int n = lines.Length;
+                int n = lines.Length + 1;
                 string text = "2;" + text1 + ";" + n.ToString() + ";" + text2;
                 text = crypt.Encrypt(text);
                 using (StreamWriter file = new StreamWriter(fullPath, true))
@@ -137,6 +137,34 @@ namespace Auxiliar
                         file.WriteLine(lines[i]);
                     }
                 }
+            }
+        }
+
+        public void multiplicaVotos(int n)
+        {
+            Criptografia cp = new Criptografia();
+            string nomeArq = "Votos.txt";
+            string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            string fullPath = path + nomeArq;
+            string[] lines = File.ReadAllLines(fullPath);
+            int count = 0;
+            for  (int i = 0; i < n; i++)
+            {
+                foreach (string line in lines)
+                {
+                    string decrypt = cp.Decrypt(line);
+                    string[] aux = decrypt.Split(';');
+                    string[] ID = File.ReadAllLines(fullPath);
+                    int id = Convert.ToInt32(ID.Length);
+                    id += 1;
+                    string encrypt = aux[0] + ";" + aux[1] + ";" + aux[2] + ";" + id.ToString() + ";" + aux[4] + ";" + aux[5] + ";" + aux[6] + ";" + aux[7] + ";" + aux[8] + ";" + aux[9];
+                    encrypt = cp.Encrypt(encrypt);
+                    using (StreamWriter file = new StreamWriter(fullPath, true))
+                    {
+                        file.WriteLine(encrypt);
+                    }                    
+                }
+                count++;
             }
         }
 
