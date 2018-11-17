@@ -139,6 +139,50 @@ namespace Auxiliar
                 }
             }
         }
+
+        public bool adminCadastrado()
+        {
+            string nomeArq = "Admin.txt";
+            string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            string fullpath = path + nomeArq;
+            if (File.Exists(fullpath))
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void gravaSenha(string senha)
+        {
+            Criptografia cp = new Criptografia();
+
+            senha = cp.Encrypt(senha);
+            string nomeArq = "Admin.txt";
+            string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            string fullPath = path + nomeArq;
+            using (StreamWriter file = new StreamWriter(fullPath))
+            {
+                file.WriteLine(senha);
+            }
+        }
+
+        public bool verificaSenha(string senha)
+        {
+            string nomeArq = "Admin.txt";
+            string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            string fullPath = path + nomeArq;
+            string[] list = File.ReadAllLines(fullPath);
+            Criptografia cp = new Criptografia();
+            if (cp.Decrypt(list[0]) == senha)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 
 }

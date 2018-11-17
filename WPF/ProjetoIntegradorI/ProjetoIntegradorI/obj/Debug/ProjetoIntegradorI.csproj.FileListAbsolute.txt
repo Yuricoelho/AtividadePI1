@@ -46,3 +46,5 @@ C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.g.cs
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.baml

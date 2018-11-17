@@ -65,6 +65,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Admin\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Admin\Sucesso.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,6 +90,9 @@
     </Compile>
     <Compile Include="Admin\CadastrarCandidato.xaml.cs">
       <DependentUpon>CadastrarCandidato.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Admin\Sucesso.xaml.cs">
       <DependentUpon>Sucesso.xaml</DependentUpon>

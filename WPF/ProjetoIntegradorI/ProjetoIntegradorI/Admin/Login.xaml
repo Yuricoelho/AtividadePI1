@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProjetoIntegradorI.Admin.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjetoIntegradorI.Admin"
+        mc:Ignorable="d"
+        Title="Login" Height="342.325" Width="625.282">
+    <Grid>
+        <Label x:Name="lblSenha" Content="Digite a senha abaixo" HorizontalAlignment="Left" Margin="183,31,0,0" VerticalAlignment="Top" Height="44" Width="249" FontSize="24" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="157,98,0,0" VerticalAlignment="Top" Width="290" Height="33" PasswordChanged="txtPassword_PasswordChanged"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Margin="493,276,0,0" VerticalAlignment="Top" Width="75" Click="btnOK_Click"/>
+        <Button x:Name="btnVoltar" Content="Voltar" HorizontalAlignment="Left" Margin="42,276,0,0" VerticalAlignment="Top" Width="75" Click="btnVoltar_Click"/>
+        <Label x:Name="lblSenhaInvalida" Content="Senha inválida!" HorizontalAlignment="Left" Margin="255,136,0,0" VerticalAlignment="Top" Foreground="Red"/>
+        <Label x:Name="lblNovaSenha" Content="Nova senha" HorizontalAlignment="Left" Margin="157,65,0,0" VerticalAlignment="Top" Width="275" Height="51" FontSize="24" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="txtNovaSenha" HorizontalAlignment="Left" Margin="157,108,0,0" VerticalAlignment="Top" Width="290" Height="33" PasswordChanged="txtNovaSenha_PasswordChanged"/>
+        <Label x:Name="lblConfirmaNovaSenha" Content="Confirmação da nova senha" HorizontalAlignment="Left" Margin="133,141,0,0" VerticalAlignment="Top" Width="346" Height="41" HorizontalContentAlignment="Center" FontSize="24"/>
+        <PasswordBox HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="txtConfirmaNovaSenha" HorizontalAlignment="Left" Margin="157,187,0,0" VerticalAlignment="Top" Width="290" Height="40" PasswordChanged="txtConfirmaNovaSenha_PasswordChanged"/>
+        <Label x:Name="lblConfirmaErro" Content="Senhas não compatíveis!" HorizontalAlignment="Left" Margin="226,232,0,0" VerticalAlignment="Top" Width="146" Foreground="Red"/>
+
+    </Grid>
+</Window>

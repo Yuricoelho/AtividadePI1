@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\
 ProjetoIntegradorI
 none
 false
 DEBUG;TRACE
-C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\WPF\ProjetoIntegradorI\ProjetoIntegradorI\App.xaml
-6-237093874
+C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\App.xaml
+71917613442
 
-16-260940474
+17-579336688
 15-1133734161
-Admin\Admin.xaml;Admin\CadastrarCandidato.xaml;Admin\Sucesso.xaml;Eleitor\Eleitor.xaml;Eleitor\Regiao.xaml;MainWindow.xaml;
+Admin\Admin.xaml;Admin\CadastrarCandidato.xaml;Admin\Login.xaml;Admin\Sucesso.xaml;Eleitor\Eleitor.xaml;Eleitor\Regiao.xaml;MainWindow.xaml;
 
-True
+False
 

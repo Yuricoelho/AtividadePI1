@@ -33,7 +33,7 @@ namespace ProjetoIntegradorI
 
         private void admin_Click(object sender, RoutedEventArgs e)
         {
-            Admin.Admin ad = new Admin.Admin();
+            Admin.Login ad = new Admin.Login();
             ad.Show();
             this.Hide();
         }
