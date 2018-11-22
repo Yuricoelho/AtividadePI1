@@ -21,6 +21,7 @@ namespace ProjetoIntegradorI.Admin
     {
         public Sucesso()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 

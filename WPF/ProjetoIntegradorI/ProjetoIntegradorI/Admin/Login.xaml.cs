@@ -22,6 +22,7 @@ namespace ProjetoIntegradorI.Admin
     {
         public Login()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             PreparaTela();
             Arquivo arq = new Arquivo();

@@ -22,6 +22,7 @@ namespace ProjetoIntegradorI.Admin
     {
         public Admin()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             preparaTela();
         }

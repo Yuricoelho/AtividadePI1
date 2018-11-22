@@ -22,6 +22,7 @@ namespace ProjetoIntegradorI.Admin
     {
         public CadastrarCandidato()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             preparaTela();
         }

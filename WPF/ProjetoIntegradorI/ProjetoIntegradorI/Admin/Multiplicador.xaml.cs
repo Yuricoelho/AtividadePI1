@@ -22,6 +22,7 @@ namespace ProjetoIntegradorI.Admin
     {
         public Multiplicador()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             preparaTela();
         }
