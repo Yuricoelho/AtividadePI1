@@ -23,6 +23,7 @@ namespace ProjetoIntegradorI
     {
         public MainWindow()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
 
