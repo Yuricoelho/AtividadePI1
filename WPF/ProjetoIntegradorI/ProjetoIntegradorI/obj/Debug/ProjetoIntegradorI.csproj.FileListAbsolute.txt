@@ -52,3 +52,34 @@ C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Multiplicador.baml
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.g.cs
 C:\Luk\Projects\IESB\AtividadePI1\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe.config
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.exe
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\bin\Debug\ProjetoIntegradorI.pdb
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csprojAssemblyReference.cache
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Admin.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\CadastrarCandidato.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Multiplicador.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Eleitor.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Regiao.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\MainWindow.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\App.g.cs
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI_MarkupCompile.cache
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI_MarkupCompile.lref
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Admin.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\CadastrarCandidato.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Login.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Multiplicador.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Admin\Sucesso.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Eleitor.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Regiao.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\Eleitor\Sucesso.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\MainWindow.baml
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.g.resources
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.Properties.Resources.resources
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.GenerateResource.cache
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.csproj.CoreCompileInputs.cache
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.exe
+C:\Users\Suporte\Documents\Lucas Hipólito\Repositório\IESB\Projeto integrador\AtividadePI1-master\WPF\ProjetoIntegradorI\ProjetoIntegradorI\obj\Debug\ProjetoIntegradorI.pdb

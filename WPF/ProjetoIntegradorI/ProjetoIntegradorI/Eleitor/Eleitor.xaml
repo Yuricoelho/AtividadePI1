@@ -22,8 +22,9 @@
         <Label x:Name="lblVotoRegObrigatorio" Content="Voto Regional obrigatório!" HorizontalAlignment="Left" Margin="552,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
         <CheckBox x:Name="chkBrancoN" Content="Branco" HorizontalAlignment="Left" Margin="357,272,0,0" VerticalAlignment="Top" Checked="chkBrancoN_Checked" Unchecked="chkBrancoN_Checked" />
         <CheckBox x:Name="chkBrancoR" Content="Branco" HorizontalAlignment="Left" Margin="585,272,0,0" VerticalAlignment="Top" Checked="chkBrancoR_Checked" Unchecked="chkBrancoR_Checked"/>
-        <Label x:Name="lblCPFvalidacao" Content="Digite apenas números!" HorizontalAlignment="Left" Margin="82,180,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblCPFvalidacao" HorizontalAlignment="Left" Margin="52,174,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
         <Label x:Name="lblVotoValidacao" Content="Apenas números ou voto em branco!" HorizontalAlignment="Left" Margin="313,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
         <Label x:Name="lblVotoRegValidacao" Content="Apenas números ou vot em branco!" HorizontalAlignment="Left" Margin="552,292,0,0" VerticalAlignment="Top" Foreground="#FFFD0101"/>
+        <Label x:Name="lblCPFdigitos" Content="Digite exatamente 11 dígitos!" HorizontalAlignment="Left" Margin="62,179,0,0" VerticalAlignment="Top" Foreground="Red"/>
     </Grid>
 </Window>

@@ -26,6 +26,8 @@ namespace ProjetoIntegradorI.Eleitor
         }
         public Eleitor(string estado) : this()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            InitializeComponent();
             this.Estado = estado;
             lblEstado.Content += estado;
             this.PreparaTela();
@@ -43,6 +45,7 @@ namespace ProjetoIntegradorI.Eleitor
 
         private void PreparaTela()
         {
+            lblCPFdigitos.Visibility = Visibility.Hidden;
             lblCPFobrigatorio.Visibility = Visibility.Hidden;
             lblVotoObrigatorio.Visibility = Visibility.Hidden;
             lblVotoRegObrigatorio.Visibility = Visibility.Hidden;
@@ -73,7 +76,11 @@ namespace ProjetoIntegradorI.Eleitor
             if (VerificaPreenchido())
             {
                 Arquivo arq = new Arquivo();
-                arq.escreveVoto(retornaUF(), CPF, 0, codCandidato, 0, codCandidatoReg, 0);
+                string candidatoNacional = arq.recuperaCandidato(codCandidato);
+                string candidatoRegional = arq.recuperaCandidato(codCandidatoReg);
+                int codPartido = candidatoNacional == string.Empty ? 0 : Convert.ToInt32(candidatoNacional.Split(';')[2]);
+                int codPartidoReg = candidatoRegional == string.Empty ? 0 : Convert.ToInt32(candidatoRegional.Split(';')[2]);
+                arq.escreveVoto(retornaUF(), CPF,0, codCandidato, codPartido, codCandidatoReg, codPartidoReg);
                 Sucesso s = new Sucesso(Estado);
                 s.Show();
                 this.Close();
@@ -83,17 +90,17 @@ namespace ProjetoIntegradorI.Eleitor
         private bool VerificaPreenchido()
         {
             PreparaTela();
-            if (string.IsNullOrEmpty(txtCPF.Text) || string.IsNullOrEmpty(txtVotacao.Text) || string.IsNullOrEmpty(txtVotacaoRegional.Text))
+            if (string.IsNullOrEmpty(txtCPF.Text) || (string.IsNullOrEmpty(txtVotacao.Text) && !chkBrancoN.IsChecked == true) || (string.IsNullOrEmpty(txtVotacaoRegional.Text) && !chkBrancoR.IsChecked == true))
             {
                 if (string.IsNullOrEmpty(txtCPF.Text))
                 {
                     lblCPFobrigatorio.Visibility = Visibility.Visible;
                 }
-                if (string.IsNullOrEmpty(txtVotacao.Text))
+                if (string.IsNullOrEmpty(txtVotacao.Text) && !chkBrancoN.IsChecked == true)
                 {
                     lblVotoObrigatorio.Visibility = Visibility.Visible;
                 }
-                if (string.IsNullOrEmpty(txtVotacaoRegional.Text))
+                if (string.IsNullOrEmpty(txtVotacaoRegional.Text) && !chkBrancoR.IsChecked == true)
                 {
                     lblVotoRegObrigatorio.Visibility = Visibility.Visible;
                 }
@@ -103,11 +110,16 @@ namespace ProjetoIntegradorI.Eleitor
             {
                 if (!long.TryParse(txtCPF.Text, out cpf))
                 {
-                    lblCPFvalidacao.Visibility = Visibility.Visible;
+                    this.lblCPFvalidacao.Visibility = Visibility.Visible;
                     return false;
                 }
                 else
                 {
+                    if (txtCPF.Text.Length != 11)
+                    {
+                        this.lblCPFdigitos.Visibility = Visibility.Visible;
+                        return false;
+                    }
                     CPF = trataCPF(cpf.ToString());
                 }
                 if(!int.TryParse(txtVotacao.Text, out codCandidato) && chkBrancoN.IsChecked == false)
@@ -115,7 +127,7 @@ namespace ProjetoIntegradorI.Eleitor
                     lblVotoValidacao.Visibility = Visibility.Visible;
                     return false;
                 }
-                if (!int.TryParse(txtVotacaoRegional.Text, out codCandidatoReg))
+                if (!int.TryParse(txtVotacaoRegional.Text, out codCandidatoReg) && chkBrancoR.IsChecked == false)
                 {
                     lblVotoRegValidacao.Visibility = Visibility.Visible;
                     return false;
@@ -152,6 +164,5 @@ namespace ProjetoIntegradorI.Eleitor
 
             return string.Empty;
         }
-
     }
 }

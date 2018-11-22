@@ -21,6 +21,7 @@ namespace ProjetoIntegradorI.Eleitor
     {
         public Regiao()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             lblerro.Visibility = Visibility.Hidden;
         }

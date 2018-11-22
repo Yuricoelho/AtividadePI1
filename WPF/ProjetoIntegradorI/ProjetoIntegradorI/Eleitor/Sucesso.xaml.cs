@@ -21,10 +21,12 @@ namespace ProjetoIntegradorI.Eleitor
     {
         public Sucesso()
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
         }
         public Sucesso(string estado)
         {
+            this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             InitializeComponent();
             this.Estado = estado;
         }
