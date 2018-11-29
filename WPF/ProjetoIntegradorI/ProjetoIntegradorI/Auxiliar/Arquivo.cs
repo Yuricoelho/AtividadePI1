@@ -13,7 +13,7 @@ namespace Auxiliar
         {
 
         }
-        private string headerVotos = "1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional;";//data";
+        private string headerVotos = "1;regiao;cpf;numero_sequencial_de_voto;codigo_do_municipio;codigo_candidato_federal;codigo_do_partido_federal;codigo_do_candidato_regional;codigo_do_partido_regional;data";
         private string headerCandidatos = "1;codigo_do_canditado;nome_canditado;codigo_do_partido";
 
         //Métodos
@@ -84,8 +84,18 @@ namespace Auxiliar
         {
             string nomeArq = "Votos.txt";
             string path = ConfigurationManager.AppSettings["CaminhoArquivos"];
+            if (recuperaCandidato(codCandidatoFederal) == string.Empty)
+            {
+                codCandidatoFederal = 0;
+                codPartidoFederal = 0;
+            }
+            if (recuperaCandidato (codCandidatoRegional) == string.Empty)
+            {
+                codCandidatoRegional = 0;
+                codPartidoregional = 0;
+            }
             string text1 = regiao + ";" + cpf;
-            string text2 = codMunicipio.ToString() + ";" + (codCandidatoFederal == -1 ? "B" : codCandidatoFederal.ToString()) + ";" + codPartidoFederal.ToString() + ";" + (codCandidatoRegional == -1 ? "B" : codCandidatoRegional.ToString()) + ";" + codPartidoregional.ToString(); //+ ";" + DateTime.Now.ToString();
+            string text2 = codMunicipio.ToString() + ";" + (codCandidatoFederal == -1 ? "B" : codCandidatoFederal.ToString()) + ";" + codPartidoFederal.ToString() + ";" + (codCandidatoRegional == -1 ? "B" : codCandidatoRegional.ToString()) + ";" + codPartidoregional.ToString() + ";" + DateTime.Now.ToString();
             string fullPath = path + nomeArq;
             Criptografia crypt = new Criptografia();
             if (!File.Exists(fullPath))
