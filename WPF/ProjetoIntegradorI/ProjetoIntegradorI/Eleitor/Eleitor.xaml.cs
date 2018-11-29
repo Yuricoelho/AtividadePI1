@@ -78,6 +78,14 @@ namespace ProjetoIntegradorI.Eleitor
                 Arquivo arq = new Arquivo();
                 string candidatoNacional = arq.recuperaCandidato(codCandidato);
                 string candidatoRegional = arq.recuperaCandidato(codCandidatoReg);
+                if (chkBrancoN.IsChecked == true)
+                {
+                    codCandidato = -1;
+                }
+                if (chkBrancoR.IsChecked == true)
+                {
+                    codCandidatoReg = -1;
+                }
                 int codPartido = candidatoNacional == string.Empty ? 0 : Convert.ToInt32(candidatoNacional.Split(';')[2]);
                 int codPartidoReg = candidatoRegional == string.Empty ? 0 : Convert.ToInt32(candidatoRegional.Split(';')[2]);
                 arq.escreveVoto(retornaUF(), CPF,0, codCandidato, codPartido, codCandidatoReg, codPartidoReg);
